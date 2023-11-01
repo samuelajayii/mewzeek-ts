@@ -1,26 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Routes, Route} from 'react-router-dom'
+import { motion } from 'framer-motion';
+import Home from './components/Home';
+import SignIn from './components/SignIn';
+import { AnimatePresence } from 'framer-motion';
+import SignUp from './components/SignUp';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <motion.div>
+      <AnimatePresence>
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/signin" element={<SignIn/>}/>
+          <Route path='/signup' element={<SignUp/>}/>
+        </Routes>
+      </AnimatePresence>
+      
+    </motion.div>
+      
   );
 }
 
 export default App;
+//https://dribbble.com/shots/13993146-Ghost-Sign-In
