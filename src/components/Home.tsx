@@ -7,7 +7,8 @@ import { Link } from 'react-router-dom'
 function Home() {
     return(
         <motion.div className='flex flex-col overflow-hidden h-screen justify-between'
-        exit={{y: '-100vw'}}
+        exit={{x: '-100vw'}}
+        transition={{duration: 0.3}}
         
         >
             <motion.div className='w-screen h-[57vh] -mt-5 flex flex-col items-center bg-black rounded-b-[50px]'
@@ -27,7 +28,7 @@ function Home() {
             animate={{opacity: 1}}
             transition={{delay: 1, duration: 1.2}}
             >
-                <Link to="/signin">Sign Up/In -</Link>
+                <Link to="/signup">Sign Up/In -</Link>
             </motion.button>
         </motion.div>
     )

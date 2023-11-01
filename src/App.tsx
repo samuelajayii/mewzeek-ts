@@ -1,26 +1,18 @@
 import React from 'react';
 import './App.css';
-import { Routes, Route} from 'react-router-dom'
-import { motion } from 'framer-motion';
-import Home from './components/Home';
-import SignIn from './components/SignIn';
+import { BrowserRouter as Router } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion';
-import SignUp from './components/SignUp';
-
+import AnimatedRoutes from './components/AnimatedRoutes';
 
 function App() {
+
   return (
-    <motion.div>
-      <AnimatePresence>
-        <Routes>
-          <Route path="/" element={<Home/>}/>
-          <Route path="/signin" element={<SignIn/>}/>
-          <Route path='/signup' element={<SignUp/>}/>
-        </Routes>
+    <Router>
+        <AnimatePresence>
+          <AnimatedRoutes/>
       </AnimatePresence>
-      
-    </motion.div>
-      
+    </Router>
+    
   );
 }
 

@@ -4,7 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { Link } from "react-router-dom";
 
 
-function Form() {
+function SignInForm() {
     
     interface FormData {
         firstName: string;
@@ -42,9 +42,9 @@ function Form() {
                 {errors.password && <span className="text-red-700">{errors.password.message}</span>}
                 <button type="submit" className="bg-black rounded-full text-white py-2.5 mt-2 transition-all duration-300 hover:shadow-xl hover:scale-110">Continue</button>
             </form>
-            <p className="mt-2 text-center">Already an exisiting user? <Link to="/signup" className="font-semibold underline text-blue-400">Sign In</Link></p>
+            <p className="mt-2 text-center">Already an exisiting user? <Link to="/signin" className="font-semibold underline text-gray-400">Sign In</Link></p>
         </div>
     )
 }
 
-export default Form
+export default SignInForm
