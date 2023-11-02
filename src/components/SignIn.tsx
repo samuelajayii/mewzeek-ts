@@ -4,14 +4,14 @@ import { faRecordVinyl } from '@fortawesome/free-solid-svg-icons'
 import SignInForm from './SignInForm'
 
 const animations = {
-    initial: {x: "100vw"},
-    animate: {x: 0},
-    exit: {x: "100vw"}
+    initial: {y: "100vh"},
+    animate: {y: 0},
+    exit: {y: "-100vh"}
 }
 
 const SignIn = () => {
     return(
-        <div className='overflow-x-hidden flex items-center justify-center h-screen'>
+        <div className='overflow-y-hidden flex items-center justify-center h-screen'>
             <motion.div
             transition={{type: "spring", stiffness: 40}} 
             variants={animations}

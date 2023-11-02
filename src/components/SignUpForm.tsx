@@ -2,7 +2,7 @@ import { ZodType, z } from "zod"
 import { useForm } from 'react-hook-form'
 import { zodResolver } from "@hookform/resolvers/zod"
 import { Link } from "react-router-dom";
-
+import { useState } from "react";
 
 function SignInForm() {
     
@@ -21,15 +21,18 @@ function SignInForm() {
 
     const {register, handleSubmit, formState: {errors}} = useForm<FormData>({ resolver: zodResolver(schema) })
 
+    const [firstName, setFirstName] = useState('')
+
     const submitData = (data: FormData) => {
         console.log(data)
+        setFirstName('') 
     }
 
     return(
         <div className="mt-5">
             <form onSubmit={handleSubmit(submitData)} className="flex flex-col">
                 <label className="font-semibold text-center md:text-left">First Name</label>
-                <input {...register('firstName')} type="text" placeholder="eg. John" className="border outline-none py-2 px-5 rounded-3xl w-80 my-3"></input>
+                <input {...register('firstName')} type="text" placeholder="eg. John" className="border outline-none py-2 px-5 rounded-3xl w-80 my-3" value={firstName} onChange={(e) => setFirstName(e.target.value)}></input>
                 {errors.firstName && <span className="text-red-700">{errors.firstName.message}</span>}
                 <label className="font-semibold text-center md:text-left">Last Name</label>
                 <input {...register('lastName')} type="text" placeholder="eg. Doe" className="border outline-none py-2 px-5 rounded-3xl w-80 my-3"></input>
@@ -40,7 +43,7 @@ function SignInForm() {
                 <label className="font-semibold mt-1 text-center md:text-left">Choose a password</label>
                 <input {...register('password')} type="password" placeholder="min. 8 characters"  className="border outline-none py-2 px-5 rounded-3xl w-80 my-3"></input>
                 {errors.password && <span className="text-red-700">{errors.password.message}</span>}
-                <button type="submit" className="bg-black rounded-full text-white py-2.5 mt-2 transition-all duration-300 hover:shadow-xl hover:scale-110">Continue</button>
+                <button type="submit" className="bg-black rounded-full text-white py-2.5 mt-2 transition-all duration-300 hover:shadow-xl hover:scale-110"><Link to="/musicpage">Continue</Link></button>
             </form>
             <p className="mt-2 text-center">Already an exisiting user? <Link to="/signin" className="font-semibold underline text-gray-400">Sign In</Link></p>
         </div>
