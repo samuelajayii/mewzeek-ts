@@ -11,7 +11,7 @@ const animations = {
 
 const SignIn = () => {
     return(
-        <div className='overflow-y-hidden flex items-center justify-center h-screen'>
+        <div className='overflow-y-hidden flex items-center justify-center h-screen '>
             <motion.div
             transition={{type: "spring", stiffness: 40}} 
             variants={animations}

@@ -6,9 +6,6 @@ import SignIn from "./SignIn"
 import SignUp from "./SignUp"
 import MusicPage from "./MusicPage"
 import {AnimatePresence} from 'framer-motion'
-import { useState } from "react"
-import Notifications from "./Notifications"
-
 
 const AnimatedRoutes = () => {
     const location = useLocation()

@@ -45,7 +45,7 @@ const TopBar = () => {
                 {modal && (
                     <AnimatePresence>
                         <motion.div
-                        className='fixed top-0 left-0 w-screen h-screen z-10 bg-[rgba(0,0,0,0.5)] flex items-center justify-center'
+                        className='fixed top-0 left-0 w-screen h-screen z-10 bg-[rgba(0,0,0,0.5)] flex items-center justify-center text-black'
                         animate={{opacity: 1}}
                         initial={{opacity: 0}}
                         transition={{duration: 0.5}}
