@@ -19,6 +19,12 @@ import eminem from '../img/eminem.jpg'
 import mayor from '../img/mayor.jpeg'
 import bts from '../img/bts.jpg'
 import coldplay from '../img/coldplay.jpg'
+import Audios from "./Audios"
+import Favourites from "./Favourites"
+import ngozi from '../img/ngozi.png'
+import cupid from '../img/cupid.png'
+import jvke from '../img/jvke.jpg'
+import obapluto from '../img/obapluto.jpg'
 
 const MusicPage = () => {
     return(
@@ -57,7 +63,30 @@ const MusicPage = () => {
                 </div>
             </div>
             <div className="flex flex-col w-full mb-10 px-3">
-
+                <h1 className="text-center font-semibold text-3xl mb-3">
+                    Listen to a wide range of audio 
+                </h1>
+                <div className="grid-cols-[repeat(auto-fill,_minmax(18rem,_1fr))] grid gap-2 mb-5 overflow-hidden py-10" id="">
+                    <Audios name={"Podcasts"} styling={"h-40 bg-gradient-to-tl from-yellow-500 to-pink-500 p-4 rounded-md cursor-pointer hover:scale-95 duration-500 active:scale-100"}/>
+                    <Audios name={"New Releases"} styling={"h-40 bg-gradient-to-tl from-cyan-500 to-blue-500 p-4 rounded-md cursor-pointer hover:scale-95 duration-500 active:scale-100"}/>
+                    <Audios name={"Afro"} styling={"h-40 bg-gradient-to-tl from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% p-4 rounded-md cursor-pointer hover:scale-95 duration-500 active:scale-100"}/>
+                    <Audios name={"Hip-Hop"} styling={"h-40 bg-gradient-to-tl from-blue-500 to-pink-500 p-4 rounded-md cursor-pointer hover:scale-95 duration-500 active:scale-100"}/>
+                    <Audios name={"Live Events"} styling={"h-40 bg-gradient-to-tl from-zinc-50 to-gray-600 p-4 rounded-md cursor-pointer hover:scale-95 duration-500 active:scale-100"}/>
+                    <Audios name={"Gospel"} styling={"h-40 bg-gradient-to-tl from-red-400 to-blue-500 p-4 rounded-md cursor-pointer hover:scale-95 duration-500 active:scale-100"}/>
+                    <Audios name={"Radio"} styling={"h-40 bg-gradient-to-tl from-green-500 to-white p-4 rounded-md cursor-pointer hover:scale-95 duration-500 active:scale-100 text-black"}/>
+                    <Audios name={"Trending"} styling={"h-40 bg-gradient-to-tl from-purple-500 to-pink-500 p-4 rounded-md cursor-pointer hover:scale-95 duration-500 active:scale-100"}/>
+                    <Audios name={"Workout"} styling={"h-40 bg-gradient-to-tl from-orange-500 to-white p-4 rounded-md cursor-pointer hover:scale-95 duration-500 active:scale-100 text-black"}/>
+                    <Audios name={"Anime"} styling={"h-40 bg-gradient-to-tl from-blue-500 to-white p-4 rounded-md cursor-pointer hover:scale-95 duration-500 active:scale-100 text-black"}/>
+                    <Audios name={"Made For You"} styling={"h-40 bg-gradient-to-tl from-cyan-700 to-white p-4 rounded-md cursor-pointer hover:scale-95 duration-500 text-black active:scale-100"}/>
+                </div>
+            </div>
+            <div className="flex flex-col items-center justify-center mb-20 mx-3">
+                <h1 className="text-center font-semibold text-3xl">My Favourites</h1>
+                <Favourites image={sasageyo} name={"Shinzou wo Sasageyo"} time={"5:41"}/>
+                <Favourites image={ngozi} name={"Ngozi"} time={"3:41"}/>
+                <Favourites image={cupid} name={"Fifty Fifty"} time={"2:54"}/>
+                <Favourites image={jvke} name={"this is what faaling in love feels like"} time={"2:00"}/>
+                <Favourites image={obapluto} name={"Obapluto"} time={"2:50"}/>
             </div>
         </div>
     )
