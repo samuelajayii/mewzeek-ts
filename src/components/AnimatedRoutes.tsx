@@ -5,6 +5,7 @@ import Home from "./Home"
 import SignIn from "./SignIn"
 import SignUp from "./SignUp"
 import MusicPage from "./MusicPage"
+import Profile from "./Profile"
 import {AnimatePresence} from 'framer-motion'
 
 const AnimatedRoutes = () => {
@@ -14,10 +15,11 @@ const AnimatedRoutes = () => {
     return(
         <AnimatePresence mode="wait">
             <Routes location={location} key={location.pathname}> 
-              <Route path="/" element={<Home />}/>
-              <Route path='/signin' element={<SignIn />}/>
-              <Route path="/signup" element={<SignUp />}/>
-              <Route path="/musicpage" element={<MusicPage />}/>
+                <Route path="/" element={<Home />}/>
+                <Route path='/signin' element={<SignIn />}/>
+                <Route path="/signup" element={<SignUp />}/>
+                <Route path="/musicpage" element={<MusicPage />}/>
+                <Route path='/profile' element={<Profile/>}/>
             </Routes>
         </AnimatePresence>
     )

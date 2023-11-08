@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
+import { motion } from "framer-motion"
 import NavBar from "./NavBar"
 import TopBar from "./TopBar"
 import golden from "../img/jungkook.avif"
@@ -28,7 +29,7 @@ import obapluto from '../img/obapluto.jpg'
 
 const MusicPage = () => {
     return(
-        <div className="bg-white text-black dark:bg-black dark:text-white">
+        <motion.div className="bg-white text-black dark:bg-black dark:text-white">
             <TopBar />
             <div className="flex lg:flex-row flex-col items-center m-10 bg-cover cursor-pointer bg-gradient-to-bl from-transparent to-gray-500 w-fit p-8 justify-center rounded-xl hover:scale-105 duration-500">
                 <img src={golden} alt="Seven" className="object-cover md:h-80 rounded-md md:rounded-xl"/>
@@ -85,10 +86,10 @@ const MusicPage = () => {
                 <Favourites image={sasageyo} name={"Shinzou wo Sasageyo"} time={"5:41"}/>
                 <Favourites image={ngozi} name={"Ngozi"} time={"3:41"}/>
                 <Favourites image={cupid} name={"Fifty Fifty"} time={"2:54"}/>
-                <Favourites image={jvke} name={"this is what faaling in love feels like"} time={"2:00"}/>
+                <Favourites image={jvke} name={"this is what falling in love feels like"} time={"2:00"}/>
                 <Favourites image={obapluto} name={"Obapluto"} time={"2:50"}/>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

@@ -17,10 +17,10 @@ const NavBar = () => {
                 <FontAwesomeIcon icon={faLayerGroup} className="text-xl"/>
                 <p>Library</p>
             </div>
-            <div className="flex flex-col items-center hover:text-white duration-200 cursor-pointer">
+            <Link to='/profile' className="flex flex-col items-center hover:text-white duration-200 cursor-pointer">
                 <FontAwesomeIcon icon={faUser} className="text-xl"/>
                 <p>Profile</p>
-            </div>
+            </Link>
         </nav>
     )
 }

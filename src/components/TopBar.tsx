@@ -59,8 +59,11 @@ const TopBar = () => {
                                     <p className='text-[1.3rem]'>Notifications</p>
                                     <button className="px-2 py-0.5" onClick={() => {setModal(!modal)}}>&times;</button>
                                 </div>
+                                <ul>
+                                    <li className="border-b py-2 list-disc">Thank you for signing up and welcome to the Mewzeek Music Player</li>
+                                    <li className="border-b py-2 list-disc">There are new and updated features</li>
+                                </ul>
                                 
-                                <h1 className="border-b py-2">Thank you for signing up and welcome to the Mewzeek Music Player</h1>
                             </motion.div>
                         </motion.div>
                     </AnimatePresence>
