@@ -6,6 +6,7 @@ import SignIn from "./SignIn"
 import SignUp from "./SignUp"
 import MusicPage from "./MusicPage"
 import Profile from "./Profile"
+import Search from "./Search"
 import {AnimatePresence} from 'framer-motion'
 
 const AnimatedRoutes = () => {
@@ -20,6 +21,7 @@ const AnimatedRoutes = () => {
                 <Route path="/signup" element={<SignUp />}/>
                 <Route path="/musicpage" element={<MusicPage />}/>
                 <Route path='/profile' element={<Profile/>}/>
+                <Route path="/search" element={<Search/>}/>
             </Routes>
         </AnimatePresence>
     )
