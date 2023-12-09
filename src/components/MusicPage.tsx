@@ -26,6 +26,7 @@ import ngozi from '../img/ngozi.png'
 import cupid from '../img/cupid.png'
 import jvke from '../img/jvke.jpg'
 import obapluto from '../img/obapluto.jpg'
+import { Link } from "react-router-dom"
 
 const MusicPage = () => {
     return(
@@ -71,14 +72,15 @@ const MusicPage = () => {
                     <Audios name={"New Releases"} styling={"bg-gradient-to-tl from-cyan-500 to-blue-500"}/>
                     <Audios name={"Afro"} styling={"bg-gradient-to-tl from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%"}/>
                     <Audios name={"Hip-Hop"} styling={"bg-gradient-to-tl from-blue-500 to-pink-500"}/>
-                    <Audios name={"Live Events"} styling={"bg-gradient-to-tl from-zinc-50 to-gray-600"}/>
-                    <Audios name={"Gospel"} styling={"bg-gradient-to-tl from-red-400 to-blue-500"}/>
+                    {/* <Audios name={"Live Events"} styling={"bg-gradient-to-tl from-zinc-50 to-gray-600"}/> */}
+                    {/* <Audios name={"Gospel"} styling={"bg-gradient-to-tl from-red-400 to-blue-500"}/>
                     <Audios name={"Radio"} styling={"bg-gradient-to-tl from-green-500 to-white text-black"}/>
                     <Audios name={"Trending"} styling={"bg-gradient-to-tl from-purple-500 to-pink-500"}/>
                     <Audios name={"Workout"} styling={"bg-gradient-to-tl from-orange-500 to-white text-black"}/>
                     <Audios name={"Anime"} styling={"bg-gradient-to-tl from-blue-500 to-white text-black"}/>
-                    <Audios name={"Made For You"} styling={"bg-gradient-to-tl from-cyan-700 to-white text-black"}/>
+                    <Audios name={"Made For You"} styling={"bg-gradient-to-tl from-cyan-700 to-white text-black"}/> */}
                 </div>
+                <Link to='/search' className="text-black bg-white rounded-sm p-[0.61rem] font-bold w-fit mx-auto -mt-6">Search for more</Link>
             </div>
             <div className="flex flex-col items-center justify-center mb-20 mx-3">
                 <h1 className="text-center font-semibold text-3xl">My Favourites</h1>
