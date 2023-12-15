@@ -34,7 +34,7 @@ function Home() {
             animate={{opacity: 1}}
             transition={{delay: 1, duration: 1.2}}
             >
-                <Link to="/signup" className='w-full h-full'>Sign Up/In -</Link>
+                <Link to="/signup" className=''>Sign Up/In -</Link>
             </motion.button>
         </motion.div>
     )

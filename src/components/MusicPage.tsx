@@ -67,7 +67,7 @@ const MusicPage = () => {
                 <h1 className="text-center font-semibold text-3xl mb-3">
                     Listen to a wide range of audio 
                 </h1>
-                <div className="grid-cols-[repeat(auto-fill,_minmax(18rem,_1fr))] grid gap-2 mb-5 overflow-hidden py-10" id="">
+                <div className="grid-cols-[repeat(auto-fill,_minmax(18rem,_1fr))] grid gap-2 mb-5 overflow-hidden py-10">
                     <Audios name={"Podcasts"} styling={"bg-gradient-to-tl from-yellow-500 to-pink-500"}/>
                     <Audios name={"New Releases"} styling={"bg-gradient-to-tl from-cyan-500 to-blue-500"}/>
                     <Audios name={"Afro"} styling={"bg-gradient-to-tl from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%"}/>

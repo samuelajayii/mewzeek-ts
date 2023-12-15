@@ -11,7 +11,7 @@ const animations = {
 
 function SignUp() {
     return(
-        <div className='overflow-x-hidden flex items-center justify-center h-screen'>
+        <div className='overflow-x-hidden flex items-center justify-center h-full my-10'>
             <motion.div className='flex flex-wrap items-center justify-center'
             transition={{type: "spring", stiffness: 40}} 
             variants={animations}

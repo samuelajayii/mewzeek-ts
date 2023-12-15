@@ -1,121 +1,137 @@
+/* eslint-disable @typescript-eslint/no-unused-expressions */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import SearchItem from "./SearchItem"
-import React from "react"
+import { useState } from "react"
 
 
-const Search: React.FC = () => {
-    const [text, setText] = React.useState('')
-    const searchItem = [
+const Search = () => {
+    const genres = [
         {
-            item: 'Made For You'
+            name: 'Made For You'
         },
         {
-            item: 'Live Events'
+            name: 'Live Events'
         },
         {
-            item: 'Radio'
+            name: 'Radio'
         },
         {
-            item: 'Trending'
+            name: 'Trending'
         },
         {
-            item: 'Workout'
+            name: 'Workout'
         },
         {
-            item: 'Anime'
+            name: 'Anime'
         },
         {
-            item: 'Trending'
+            name: 'Trending'
         },
         {
-            item: 'Party'
+            name: 'Party'
         },
         {
-            item: 'Educational'
+            name: 'Educational'
         },
         {
-            item: 'True Crime'
+            name: 'True Crime'
         },
         {
-            item: 'Comedy'
+            name: 'Comedy'
         },
         {
-            item: 'Sleep'
+            name: 'Sleep'
         },
         {
-            item: 'Dsicover'
+            name: 'Dsicover'
         },
         {
-            item: 'Radio'
+            name: 'Focus'
         },
         {
-            item: 'Focus'
+            name: 'Throwback'
         },
         {
-            item: 'Throwback'
+            name: 'Soul'
         },
         {
-            item: 'Soul'
+            name: 'Gaming'
         },
         {
-            item: 'Gaming'
+            name: 'Love'
         },
         {
-            item: 'Love'
+            name: 'Focus'
         },
         {
-            item: 'Focus'
+            name: 'Jazz'
         },
         {
-            item: 'Jazz'
+            name: 'K-pop'
         },
         {
-            item: 'K-pop'
+            name: 'Raggae'
         },
         {
-            item: 'Raggae'
+            name: 'Classical'
         },
         {
-            item: 'Classical'
+            name: 'Country'
         },
         {
-            item: 'Country'
+            name: 'Latin'
         },
         {
-            item: 'Latin'
+            name: 'Punk'
         },
         {
-            item: 'Punk'
+            name: 'Metal'
         },
         {
-            item: 'Metal'
+            name: 'Acoustic'
         },
         {
-            item: 'Acoustic'
+            name: 'Disco'
         },
         {
-            item: 'Disco'
-        },
-        {
-            item: 'Alternative'
+            name: 'Alternative'
         }
     ]
 
+
+    const [genreList, setGenreList] = useState<{name: string}[] | undefined>(genres)
+    const [text, setText] = useState('')
+
+    const handleClick = () => {
+        const findGenres = genreList && genreList?.length > 0 ? genreList?.filter(n => n?.name === text) : undefined;
+        setGenreList(findGenres)
+    }
+
+    const change = (e: React.FormEvent<HTMLInputElement>) => {
+        setText(e.currentTarget.value);
+        setGenreList(genres)
+    }
+    
     return (
-        <div className="dark:bg-black dark:text-white bg-white text-black h-screen flex flex-col items-center">
-            <div className="mt-5 flex flex-col md:flex-row items-center flex-wrap">
-                <form className="border-solid border-white border rounded flex items-center bg-white text-black font-bold justify-between h-max min-w-[19rem]">
+        <div className="dark:bg-black dark:text-white bg-white text-black h-full flex flex-col items-center">
+            <div className=" flex flex-col md:flex-row items-center justify-center flex-wrap w-full bg-gray-400 py-3 top-0 fixed">
+                <div className="border-solid border-white border rounded flex items-center bg-white text-black font-bold justify-between h-max min-w-[30rem]">
                     <div>
                         <FontAwesomeIcon icon={faMagnifyingGlass} className="ml-2.5" />
-                        <input type="text" name="" placeholder=" Search for music or podcasts" className="border-none outline-none shadow-none py-2 px-2.5" value={text} onChange={e => setText(e.target.value)} />
+                        <input type="text" name="" placeholder=" Search for music or podcasts" className="border-none outline-none shadow-none py-2 px-2.5" value={text} onChange={change} />
                     </div>
-                    <h1 className="text-3xl cursor-pointer mb-1.5 mr-2" id="close-search-btn">&times;</h1>
-                </form>
-                <button className="text-black bg-white rounded-sm p-[0.61rem] ml-5 font-bold mt-4 md:mt-0">Search</button>
+                    <button type="submit" onClick={handleClick} className="text-white bg-black rounded-sm p-[0.61rem] font-bold cursor-pointer" >Search</button>
+                </div>
+                
             </div>
-            <SearchItem />
+            <div className="grid-cols-[repeat(auto-fill,_minmax(28rem,_1fr))] grid gap-2 mb-5 overflow-hidden py-10 mt-10">
+                {genreList && genreList?.length > 0 && genreList?.map(genre => {
+                    return (
+                        <h1 className="p-5 border border-white cursor-pointer hover:scale-95 transition-all duration-100">{genre?.name}</h1>
+                    )
+                })}
+            </div>
         </div>
     )
 }
