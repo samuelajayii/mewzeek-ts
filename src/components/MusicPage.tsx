@@ -27,10 +27,11 @@ import cupid from '../img/cupid.png'
 import jvke from '../img/jvke.jpg'
 import obapluto from '../img/obapluto.jpg'
 import { Link } from "react-router-dom"
-
+import { Routes, Route } from "react-router-dom"
 const MusicPage = () => {
     return(
         <motion.div className="bg-white text-black dark:bg-black dark:text-white">
+            <NavBar />
             <TopBar />
             <div className="flex lg:flex-row flex-col items-center m-10 bg-cover cursor-pointer bg-gradient-to-bl from-transparent to-gray-500 w-fit p-8 justify-center rounded-xl hover:scale-105 duration-500">
                 <img src={golden} alt="Seven" className="object-cover md:h-80 rounded-md md:rounded-xl"/>
@@ -50,7 +51,7 @@ const MusicPage = () => {
                 <RecentlyAdded name={split} title={"Split Decisions"} background={"bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%"}/>
                 <RecentlyAdded name={uify} title={"Until I Found You"} background={"bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%"}/>
             </div>
-            <NavBar />
+            
             <div className="flex flex-col justify-center mb-14">
                 <h1 className="font-semibold text-3xl text-center">Playlists for you</h1>
                 <div className="flex flex-row overflow-x-scroll overflow-y-hidden mx-3" id="scroll">

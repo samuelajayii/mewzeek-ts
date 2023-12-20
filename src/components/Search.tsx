@@ -1,9 +1,8 @@
-/* eslint-disable @typescript-eslint/no-unused-expressions */
-/* eslint-disable @typescript-eslint/no-unused-vars */
+
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { useState } from "react"
-
+import NavBar from "./NavBar"
 
 const Search = () => {
     const genres = [
@@ -115,6 +114,7 @@ const Search = () => {
     
     return (
         <div className="dark:bg-black dark:text-white bg-white text-black h-full flex flex-col items-center">
+            <NavBar />
             <div className=" flex flex-col md:flex-row items-center justify-center flex-wrap w-full bg-gray-400 py-3 top-0 fixed">
                 <div className="border-solid border-white border rounded flex items-center bg-white text-black font-bold justify-between h-max min-w-[30rem]">
                     <div>
